@@ -1,0 +1,225 @@
+{
+  "selectedTemplate": 1,
+  "headings": {
+    "skills": "SKILLS",
+    "education": "EDUCATION",
+    "work": "WORK EXPERIENCE",
+    "projects": "INDEPENDENT PROJECTS",
+    "awards": "AWARDS"
+  },
+  "basics": {
+    "name": "Kondasamy Jayaraman",
+    "email": "kondasamy@outlook.com",
+    "phone": "+91-90034 94498",
+    "location": {
+      "address": "Bengaluru, India"
+    },
+    "website": "https://github.com/Kondasamy"
+  },
+  "education": [
+    {
+      "institution": "PSG College of Technology | Anna University",
+      "area": "Information Technology",
+      "studyType": "B.Sc",
+      "endDate": "May 2012",
+      "location": "Coimbatore, India",
+      "startDate": "Jun 2009",
+      "gpa": "9.43"
+    }
+  ],
+  "work": [
+    {
+      "location": "Bengaluru, India",
+      "position": "Senior SDET (QA) | Inventory platform team",
+      "website": "",
+      "startDate": "Mar 2017",
+      "endDate": "Present",
+      "highlights": [
+        "Implemented Robot framework from scratch with customised test flows for API testing.",
+        "Worked with Product & Development teams to understand the business needs and identify the quality requirements.",
+        "Supported CI/CD efforts, proposed test automation tooling & infrastructure and worked with developers to build and maintain it."
+      ],
+      "company": "redBus | MakeMyTrip - Goibibo Group"
+    },
+    {
+      "highlights": [
+        "Performance testing and involved in strategic discussions on improving application performance",
+        "Actively contributed to the tech strategy with insights on test automation and software quality."
+      ],
+      "company": "Scientific Games | Bally Technologies",
+      "position": "Test Engineer | Backend team - Atlantic Lottery",
+      "location": "Bengaluru, India",
+      "startDate": "Apr 2016",
+      "endDate": "Mar 2017"
+    },
+    {
+      "highlights": [
+        "Problem solver and Responsible for test automation and regression test suite preparation.",
+        "Defect validations and measured code coverage along with development teams involvement."
+      ],
+      "company": "Cognizant Technology Solutions | LexisNexis",
+      "position": "Programmer Analyst | Backend team - Lexis Advance",
+      "location": "Coimbatore, India",
+      "startDate": "Jul 2012",
+      "endDate": "Apr 2016"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "Python",
+        "Groovy",
+        "Java"
+      ],
+      "name": "Programming languages"
+    },
+    {
+      "keywords": [
+        "MySQL",
+        "MongoDB",
+        "Cassandra",
+        "Redis",
+        "Redshift",
+        "Elasticsearch"
+      ],
+      "name": "Databases"
+    },
+    {
+      "keywords": [
+        "SoapUI",
+        "Ready API",
+        "Postman",
+        "Selenium",
+        "UFT",
+        "CA DevTest"
+      ],
+      "name": "Testing tools/ library"
+    },
+    {
+      "keywords": [
+        "New relic",
+        "Grafana",
+        "Kibana",
+        "Sentry",
+        "AWS Cloudwatch"
+      ],
+      "name": "Application monitoring"
+    },
+    {
+      "keywords": [
+        "Robot framework",
+        "SoapUI Hybrid framework",
+        "Cucumber (BDD)"
+      ],
+      "name": "Test automation frameworks"
+    },
+    {
+      "keywords": [
+        "OWASP Zap",
+        "OWTF",
+        "Burpsuite"
+      ],
+      "name": "Security testing tools"
+    },
+    {
+      "keywords": [
+        "JMeter",
+        "Gatling",
+        "Locust",
+        "LoadUI"
+      ],
+      "name": "Load testing tools"
+    },
+    {
+      "keywords": [
+        "Docker",
+        "ELK Centralised logging",
+        "Bash",
+        "Amazon web services",
+        "Azure"
+      ],
+      "name": "DevOps"
+    }
+  ],
+  "projects": [
+    {
+      "description": "Automated test reports and logs generator for SoapUI and Ready API test runs.",
+      "url": "https://github.com/Kondasamy/soapui-plugin-file-export",
+      "keywords": [
+        "Groovy",
+        "Java",
+        "Gradle"
+      ],
+      "name": "SoapUI Plugin"
+    },
+    {
+      "keywords": [
+        "Python",
+        "Scrapy",
+        "Selenium",
+        "Pandas"
+      ],
+      "name": "Inventory Data Aggregator",
+      "description": "Data scraping and massive data comparator for inventory analysis to identify missing bus inventories.",
+      "url": "Closed source"
+    },
+    {
+      "keywords": [
+        "Cucumber",
+        "Java"
+      ],
+      "name": "BDD Testing Framework (PoC)",
+      "description": "BDD Automation testing framework development using Cucumber for API and UI functional testing."
+    },
+    {
+      "keywords": [
+        "VS Instrumentation",
+        "Jenkins"
+      ],
+      "name": "Automated Code Coverage",
+      "description": "CI framework to execute automated code coverage for .Net (C#) projects and report generation."
+    }
+  ],
+  "awards": [
+    {
+      "title": "Trailblazer award",
+      "awarder": "redBus",
+      "date": "Q1 2017 - 18",
+      "summary": "Recognized for implementing unit testing approach along with integration tests."
+    },
+    {
+      "title": "Star of the month (Spot bonus)",
+      "date": "July 2016",
+      "awarder": "Scientific Games",
+      "summary": "Awarded for developing web services testing framework from the scratch."
+    },
+    {
+      "title": "QEA Pride of the year",
+      "date": "2015",
+      "awarder": "Cognizant Technology Solutions",
+      "summary": "Recognized for implementing wiki portal and tech forum for internal team knowledge share."
+    },
+    {
+      "title": "Idea champion of the year",
+      "date": "2014 & 2015",
+      "awarder": "Cognizant Innovation Group",
+      "summary": "Awarded for ideating and managing innovation metrics for entire LexisNexis account."
+    },
+    {
+      "title": "SmartBear Community Topper",
+      "awarder": "SmartBear",
+      "date": "Oct & Nov 2015",
+      "summary": "Been a problem solver for SoapUI community and topped the chart twice."
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "work",
+    "skills",
+    "projects",
+    "awards",
+    "education"
+  ]
+}
