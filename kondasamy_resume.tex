@@ -1,169 +1,164 @@
-%-------------------------
-% Resume in Latex
-% Author : Kondasamy Jayaraman
-% License : MIT
-%------------------------
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[margin=1in]{geometry}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
 
-\documentclass[letterpaper,11pt]{article}
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
 
-\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
 
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
 
-\begin{document}
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://github.com/kondasamy}{\Large Kondasamy Jayaraman}} & Email : \href{mailto:kondasamy@outlook.com}{kondasamy@outlook.com}\\
-  \href{http://github.com/kondasamy}{http://github.com/kondasamy} & Mobile : +91-90034-94498 \\
-\end{tabular*}
+    \begin{document}
+\vspace*{-40pt}
 
+    
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Kondasamy Jayaraman}}\\
+	Bengaluru, India $\cdot$ kondasamy@outlook.com $\cdot$ +91-90034 94498 $\cdot$ https://github.com/Kondasamy\\
+\end{center}
 
-    \resumeSubheading
-      {redBus (Goibibo - MakeMyTrip Group)}{Bangalore, India}
-      {Sr.SDET}{Mar 2017 - Present}
-      \resumeItemListStart
-        \resumeItem{Search \& Booking Platform}
-          {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models.}
-        \resumeItem{Apache Beam}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
-      \resumeItemListEnd
+%==== Experience ====%
+\header{WORK EXPERIENCE}
+\vspace{1mm}
 
-    \resumeSubheading
-      {Coursera}{Mountain View, CA}
-      {Senior Software Engineer}{Jan 2014 - Oct 2016}
-      \resumeItemListStart
-        \resumeItem{Notifications}
-          {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing etc.}
-        \resumeItem{Nostos}
-          {Bulk data processing and injection service from Hadoop to Cassandra and provides a thin REST layer on top for serving offline computed data online.}
-        \resumeItem{Workflows}
-          {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusables patterns to expedite developer productivity.}
-        \resumeItem{Data Collection}
-          {Designed the internal survey and crowd sourcing platform which allowed for creating various tasks for crowd sourcing or embedding surveys across the Coursera platform.}
-      \resumeItemListEnd
+\textbf{redBus \textbar{} MakeMyTrip - Goibibo Group} \hfill Bengaluru, India\\
+\textit{Lead SDET \textbar{} Inventory platform team} \hfill Oct 2018 | Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Lead efforts of test automation and mentored team members on automation suite perparation
+\end{itemize}
+\textbf{redBus \textbar{} MakeMyTrip - Goibibo Group} \hfill Bengaluru, India\\
+\textit{Senior SDET (QA) \textbar{} Inventory platform team} \hfill Mar 2017 | Sep 2018\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Implemented Robot framework from scratch with customised test flows for API testing.
+	\item Worked with Product \& Development teams to understand the business needs and identify the quality requirements.
+	\item Supported CI/CD efforts, proposed test automation tooling \& infrastructure and worked with developers to build and maintain it.
+\end{itemize}
+\textbf{Scientific Games \textbar{} Bally Technologies} \hfill Bengaluru, India\\
+\textit{Test Engineer \textbar{} Backend team - Atlantic Lottery} \hfill Apr 2016 | Mar 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Performance testing and involved in strategic discussions on improving application performance
+	\item Actively contributed to the tech strategy with insights on test automation and software quality.
+\end{itemize}
+\textbf{Cognizant Technology Solutions \textbar{} LexisNexis} \hfill Coimbatore, India\\
+\textit{Programmer Analyst \textbar{} Backend team - Lexis Advance} \hfill Jul 2012 | Apr 2016\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Problem solver and Responsible for test automation and regression test suite preparation.
+	\item Defect validations and measured code coverage along with development teams involvement.
+\end{itemize}
 
-    \resumeSubheading
-      {Lucena Research}{Atlanta, GA}
-      {Data Scientist}{Summer 2012 and 2013}
-      \resumeItemListStart
-        \resumeItem{Portfolio Management}
-          {Created models for portfolio hedging,  portfolio optimization and price forecasting. Also creating a strategy backtesting engine used for simulating and backtesting strategies.}
-        \resumeItem{QuantDesk}
-          {Python backend for a web application used by hedge fund managers for portfolio management.}
-      \resumeItemListEnd
+\header{SKILLS}
+\begin{tabular}{ l l }
+	Programming languages:      & Python, Groovy, Java                                              \\
+	Databases:                  & MySQL, MongoDB, Cassandra, Redis, Redshift, Elasticsearch         \\
+	Testing tools/ library:     & SoapUI, Ready API, Postman, Selenium, UFT, CA DevTest             \\
+	Application monitoring:     & New relic, Grafana, Kibana, Sentry, AWS Cloudwatch                \\
+	Test automation frameworks: & Robot framework, SoapUI Hybrid framework, Cucumber (BDD)          \\
+	Security testing tools:     & OWASP Zap, OWTF, Burpsuite                                        \\
+	Load testing tools:         & JMeter, Gatling, Locust, LoadUI                                   \\
+	DevOps:                     & Docker, ELK Centralised logging, Bash, Amazon web services, Azure \\
+\end{tabular}
+\vspace{2mm}
 
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Research and Teaching Assistant}{Jan 2012 - Dec 2013}
-      \resumeItemListStart
-        \resumeItem{Research Assistant - Machine Learning}
-          {Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the python library QSTK.}
-        \resumeItem{Teaching Assistant - Computational Investing}
-          {The online course on Coursera, had more than 100,000 students enrolled. It was featured on the 11 Alive News and the Atlanta Journal Constitution. Involved in creating assignment, exams and conducting recitation sessions. Also taught the on-campus version of the course.}
-      \resumeItemListEnd
+\header{INDEPENDENT PROJECTS}
+{\textbf{SoapUI Plugin}} {\sl Groovy, Java, Gradle} \hfill https://github.com/Kondasamy/soapui-plugin-file-export\\
+Automated test reports and logs generator for SoapUI and Ready API test runs.\\
+\vspace*{2mm}
+{\textbf{Inventory Data Aggregator}} {\sl Python, Scrapy, Selenium, Pandas} \hfill Closed source\\
+Data scraping and massive data comparator for inventory analysis to identify missing bus inventories.\\
+\vspace*{2mm}
+{\textbf{BDD Testing Framework (PoC)}} {\sl Cucumber, Java} \\
+BDD Automation testing framework development using Cucumber for API and UI functional testing.\\
+\vspace*{2mm}
+{\textbf{Automated Code Coverage}} {\sl VS Instrumentation, Jenkins} \\
+CI framework to execute automated code coverage for .Net (C\#) projects and report generation.\\
+\vspace*{2mm}
 
-  \resumeSubHeadingListEnd
+\header{AWARDS}
+\textbf{Trailblazer award} \hfill redBus\\
+Recognized for implementing unit testing approach along with integration tests. \hfill Q1 2017 - 18\\
+\vspace*{2mm}
+\textbf{Star of the month (Spot bonus)} \hfill Scientific Games\\
+Awarded for developing web services testing framework from the scratch. \hfill July 2016\\
+\vspace*{2mm}
+\textbf{QEA Pride of the year} \hfill Cognizant Technology Solutions\\
+Recognized for implementing wiki portal and tech forum for internal team knowledge share. \hfill 2015\\
+\vspace*{2mm}
+\textbf{Idea champion of the year} \hfill Cognizant Innovation Group\\
+Awarded for ideating and managing innovation metrics for entire LexisNexis account. \hfill 2014 \& 2015\\
+\vspace*{2mm}
+\textbf{SmartBear Community Topper} \hfill SmartBear\\
+Been a problem solver for SoapUI community and topped the chart twice. \hfill Oct \& Nov 2015\\
+\vspace*{2mm}
 
-%--------TECHNICAL SKILLS------------
-\section{Technical Skills}
-  \resumeSubHeadingListStart
-    \item{
-      \textbf{Programming languages}{: Python, Groovy, Java, SQL}
-      \hfill
-      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-    }
-  \resumeSubHeadingListEnd
+%==== Education ====%
+\header{EDUCATION}
+\textbf{PSG College of Technology \textbar{} Anna University}\hfill Coimbatore, India\\
+B.Sc Information Technology \textit{GPA: 9.43/ 10} \hfill Jun 2009 - May 2012\\
+\vspace{2mm}
 
-
-%-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
-    \resumeSubItem{Github Visualization}
-      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-    \resumeSubItem{Recommendation System}
-      {Music and Movie recommender systems using collaborative filtering on public datasets.}
-    \resumeSubItem{Mac Setup}
-      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
-  \resumeSubHeadingListEnd
-
-
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Master of Science in Computer Science;  GPA: 4.00}{Aug. 2012 -- Dec. 2013}
-    \resumeSubheading
-      {Birla Institute of Technology and Science}{Pilani, India}
-      {Bachelor of Engineering in Electrical and Electronics;  GPA: 3.66 (9.15/10.0)}{Aug. 2008 -- July. 2012}
-  \resumeSubHeadingListEnd
-
-%-------------------------------------------
+\ 
 \end{document}
